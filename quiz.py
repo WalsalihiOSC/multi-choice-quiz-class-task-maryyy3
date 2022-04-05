@@ -14,6 +14,15 @@ class Quiz:
         self.v = tk.StringVar(value="")
         self.v.set = (0)
 
-        
+        selected_answer = self.v.get()
+        ans = (('14', 'Incorrect, sorry!'),
+         ('7', 'Incorrect, try again!'),
+         ('5', 'Incorrect, try again?'),
+         ('4', 'Correct answer! Well done!'),
+         ('53', 'Incorrect, very incorrect'))
+
+
+
+
 q = Quiz(root)
 root.mainloop()
