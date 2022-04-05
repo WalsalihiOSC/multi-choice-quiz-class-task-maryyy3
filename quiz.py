@@ -14,6 +14,7 @@ class Quiz:
         self.v = tk.StringVar(value="")
         self.v.set = (0)
 
+
         selected_answer = self.v.get()
         ans = (('14', 'Incorrect, sorry!'),
          ('7', 'Incorrect, try again!'),
@@ -32,10 +33,10 @@ class Quiz:
 
 
         def selected_answer(self):
-          self.selected_answer.showinfo(self, title='answer', message=self.v.get())
+          ttk.messagebox(title='answer', message=self.v.get())
 
         # button
-        button = ttk.Button(parent,text="Submit answer",command=selected_answer)
+        button = ttk.Button(parent,text="Submit answer",command=self.selected_answer)
         button.pack(fill='x', padx=5, pady=5)
 
 
