@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter.messagebox import showinfo
+from tkinter import messagebox
 
 # root window
 root = tk.Tk()
@@ -32,11 +33,11 @@ class Quiz:
             r.pack(fill='x', padx=5, pady=5)
 
          # button
-        button = ttk.Button(parent, text="Submit answer", command=self.selected_answer)
+        button = ttk.Button(parent, text="Submit answer", command=self.sel_answer)
         button.pack(fill='x', padx=5, pady=5)
 
-    def selected_answer(self):
-        showinfo(title='answer', message=self.v.get())
+    def sel_answer(self):
+        messagebox.showinfo(title='answer', message="Your answer is: ".format(self.v.get()))
 
 
 q = Quiz(root)
