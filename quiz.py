@@ -21,7 +21,22 @@ class Quiz:
          ('4', 'Correct answer! Well done!'),
          ('53', 'Incorrect, very incorrect'))
 
+        #label
+        label = ttk.Label(text="How many stars are on the New Zealand flag?")
+        label.pack(fill='x', padx=5, pady=5)
 
+        # radio buttons
+        for ans in ans:
+            r = ttk.Radiobutton(parent,text=ans[0],value=ans[1],variable=self.v.get())
+            r.pack(fill='x', padx=5, pady=5)
+
+
+        def selected_answer(self):
+          self.selected_answer.showinfo(self, title='answer', message=self.v.get())
+
+        # button
+        button = ttk.Button(parent,text="Submit answer",command=selected_answer)
+        button.pack(fill='x', padx=5, pady=5)
 
 
 q = Quiz(root)
