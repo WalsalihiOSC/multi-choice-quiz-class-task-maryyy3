@@ -31,13 +31,12 @@ class Quiz:
             r = ttk.Radiobutton(parent,text=ans[0],value=ans[1],variable=self.v.get())
             r.pack(fill='x', padx=5, pady=5)
 
-
-        def selected_answer(self):
-          ttk.messagebox(title='answer', message=self.v.get())
-
-        # button
-        button = ttk.Button(parent,text="Submit answer",command=self.selected_answer)
+         # button
+        button = ttk.Button(parent, text="Submit answer", command=self.selected_answer)
         button.pack(fill='x', padx=5, pady=5)
+
+    def selected_answer(self):
+        showinfo(title='answer', message=self.v.get())
 
 
 q = Quiz(root)
